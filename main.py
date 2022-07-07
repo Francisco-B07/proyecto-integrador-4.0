@@ -1,8 +1,10 @@
-lista=[]
-for i in range(5):
-    numero = int(input("Introduce un número: "))
-    lista.append(numero)
-print(lista)
+def cargarLista():
+    lista=[]
+    for i in range(5):
+        numero = int(input("Introduce un número entero: "))
+        lista.append(numero)
+    return lista
+
 
 # funcion suma
 def suma(lista):
@@ -23,11 +25,10 @@ def maximo(lista):
         if(lista[i]>max):
             max = lista[i] 
     return max
-    
-
 
 
 def main():
+    lista = cargarLista()
     print("El resultado de la suma es: ", suma(lista))
     print("El resultado del promedio es: ", promedio(lista))
     print("El máximo es: ", maximo(lista))

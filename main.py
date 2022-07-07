@@ -27,10 +27,21 @@ def maximo(lista):
     return max
 
 
+# funcion minimo
+def minimo(lista):
+    min = lista[0]
+    for i in range(5):
+        if(lista[i]<min):
+            min = lista[i] 
+    return min
+
+
 def main():
     lista = cargarLista()
     print("El resultado de la suma es: ", suma(lista))
     print("El resultado del promedio es: ", promedio(lista))
     print("El máximo es: ", maximo(lista))
+    print("El mínimo es: ", minimo(lista))
 
+    
 main()
